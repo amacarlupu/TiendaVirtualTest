@@ -16,6 +16,8 @@ function inicio() {
     }
 
     searchProducto.addEventListener('click', fetchBusquedaProducto);
+    inputProducto.addEventListener('keyup', busquedaProducto );
+
 }
 
 
@@ -87,11 +89,24 @@ async function fetchBusquedaProducto(e) {
     try {
         const resp = await fetch(`https://ejercicio-producto.herokuapp.com/tienda/producto/name/${palabra}`);
         const data = await resp.json();
+        
+        if( data.message ){
+            return
+        }
         itemProducto.innerHTML = "";
         renderCards(data);
         inputProducto.value = '';
     } catch (err) {
         console.log(err);
+    }
+}
+
+function busquedaProducto(e){
+    e.preventDefault();
+    if ( e.key === 'Enter' ){
+        fetchBusquedaProducto(e);
+    }else{
+        return
     }
 }
 
@@ -102,7 +117,6 @@ function cargar(e) {
         itemProducto.innerHTML = "";
         fetchProducto();
     }
-
     e.stopPropagation();
 }
 
