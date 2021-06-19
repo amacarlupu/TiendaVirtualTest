@@ -1,6 +1,7 @@
 # Tienda Online Test
 
-_Tienda Online con los productos disponibles. En este proyecto se utilizó HTML, CSS, Javascript y Bootstrap, la lista de productos y categorías se obtuvo de la API REST construida anteriormete._
+_Tienda Online con los productos disponibles. En este proyecto se utilizó HTML, CSS, Javascript y Bootstrap, la lista de productos y categorías se obtuvo de la API REST construida anteriormete.
+El enlace es el siguiente: https://amacarlupu.github.io/TiendaVirtualTest/_
 
 ![alt text](https://i.imgur.com/nDRka2O.png)
 
